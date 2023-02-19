@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div>
+        <h3>Add a new product</h3>
+        <form th:object="${product}" action="add" method = "post">
+            Product number : <input type="text" th:field="*{number}"></br>
+            <span th:if="${#fields.hasErrors('number')}" th:errors="*{number}"></span>
+            Name : <input type="text" th:field="*{name}"></br>
+            <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+            Price : <input type="number" th:field="*{price}"></br>
+            <span th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></span>
+            <input type="submit" value="Save" class="btn btn-primary">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:util="urn:thymeleaf-util">
+<head>
+  <meta charset="UTF-8">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<div id="header">
+  <h2>Your shopping cart</h2>
+</div>
+<table class="datatable" border="1">
+  <tr><th>Quantity</th><th>Product Number</th><th>Name</th><th>Price</th><th>Total</th></tr>
+  <tr th:each="cartItem : ${carts}">
+    <td th:text="${cartItem.qty}">Quantity</td>
+    <td th:text="${cartItem.number}">Product Number</td>
+    <td th:text="${cartItem.name}">Name</td>
+    <td th:text="${cartItem.price}">Price</td>
+    <td th:text="${cartItem.price * cartItem.qty}">Total</td>
+    <td>
+      <form action="removefromcart" method="post">
+        <button type="submit" name="number" th:value="${cartItem.number}" class="btn btn-danger">Remove</button>
+      </form>
+    </td>
+  </tr>
+</table>
+<h2>Total :</h2><br/>
+<h2 th:text="${totalShoppingCart}"></h2><br/>
+<form action="products" method="get">
+  <button type="submit">Show Products</button>
+</form>
+</body>
+</html>

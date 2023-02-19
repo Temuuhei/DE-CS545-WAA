@@ -1,0 +1,36 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div id="header">
+        <h2>List of products</h2>
+    </div>
+    <table class="datatable" border="1">
+        <tr><th>Product Number</th><th>Name</th><th>Price</th></tr>
+        <tr th:each="product : ${productList}">
+            <td th:text="${product.number}">Product Number</td>
+            <td th:text="${product.name}">Name</td>
+            <td th:text="${product.price}">Price</td>
+            <td class="text-center">
+                <form action="delete" method="post">
+                    <button type="submit" name="number" th:value="${product.number}" class="btn btn-danger">Remove product</button>
+                </form>
+            </td>
+            <td class="text-center">
+                <form action="addtocart" method="post">
+                    <input type="hidden" name="name" th:value="${product.name}">
+                    <input type="hidden" name="price" th:value="${product.price}">
+                    <button type="submit" name="number" th:value="${product.number}" class="btn btn-primary">Add to cart</button>
+                </form>
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <form action="addproduct" method="post">
+        <button type="submit">Add Product</button>
+    </form>
+</body>
+</html>
