@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket Chat Application</title>
+    <script type="text/javascript">
+var ws;
+
+function connect() {
+
+	ws = new WebSocket("ws://localhost:8080/calc");
+
+	ws.onmessage = function(event) {
+		showdata(event.data);
+	}
+
+    ws.onclose = function(event){
+        showdata("Connection closed!");
+    };
+
+    expression.innerHTML = "";
+}
+
+function disconnect() {
+	if (ws != null) {
+		ws.close();
+	}
+}
+
+function sendData() {
+	var text = document.getElementById("expression").value;
+	ws.send(text);
+}
+
+function showdata(message) {
+    result.innerHTML += "<br/>" + message;
+}
+</script>
+</head>
+<body>
+<div>
+    <div>
+        <div>
+            <div>
+                <button id="connect" type="button" onclick="connect();" >Connect</button>
+                <button id="disconnect" type="button" onclick="disconnect();" >Disconnect</button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div>
+            <table id="chat">
+                <thead>
+                <tr>
+                    <th>Welcome user. Please enter your calculation text (only use +, -)</th>
+                </tr>
+                </thead>
+                <tbody id="result">
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <div>
+                <div>
+                    <textarea id="expression" placeholder="Example 3 + 5, 3 - 5 + 2, or (1+(4+5+2)-3)+(6+8)" required></textarea>
+                </div>
+                <button id="send" type="button" onclick="sendData();">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
