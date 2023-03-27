@@ -1,0 +1,23 @@
+type BankDTO {
+    accountNumber : Int!
+    accountHolder : String!
+
+}
+
+type Transaction {
+    description : String
+    amount : Float
+    bank : BankDTO!
+}
+
+type Query {
+    banks (count : Int!) : [BankDTO]
+    bank(accountNumber: Int!) : BankDTO
+#    bank(accountNumber : Int!) : Float
+#    bank(accountNumber : Int!, amount : Float!, desc : String!):[Bank]
+}
+
+type Mutation {
+    createBank(accountNumber : Int!, accountHolder : String!) : BankDTO
+    createTransaction(accountNumber : Int!, accountHolder : String!, amount : Float!, desc : String!) : BankDTO
+}
