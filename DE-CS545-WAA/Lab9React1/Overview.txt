@@ -1,0 +1,44 @@
+1. add component and connect to App.js
+
+import React from 'react';
+
+export const Component = () => {
+
+
+    let component = (
+        <table>
+            <tr>
+                <th>
+                <button onClick={e => alert(e.target.innerText)}>Say Welcome from Button 1</button>
+                </th>
+            </tr>
+        </table>
+        
+    );
+
+    return component;
+
+}
+
+import { Component } from './pages/Component';
+import { Component1 } from './pages/Component1';
+import './App.css';
+import { Component2 } from './pages/Component2';
+import { Component3 } from './pages/Component3';
+
+function App() {
+  return (
+    <table>
+    <tr>
+      <td><Component /></td>
+      <td><Component1/></td>
+    </tr>
+    <tr>
+      <td><Component2 /></td>
+      <td><Component3 /></td>
+    </tr>
+  </table>
+  );
+}
+
+export default App;
