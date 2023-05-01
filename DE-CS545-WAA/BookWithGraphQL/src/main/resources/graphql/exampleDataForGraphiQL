@@ -1,0 +1,36 @@
+mutation {
+  createBook (isbn : "1",author :"Temka", title: "OUT", price :123) {
+    isbn
+  }
+}
+
+mutation {
+  deleteBook (isbn : "2") {
+    isbn
+  }
+}
+
+mutation {
+  createBook (isbn : "2",author :"Temka", title: "OUT", price :123) {
+    isbn
+  }
+}
+
+
+{
+  books(count :2) {
+    isbn
+    author
+    price
+    title
+  }
+}
+
+{
+  book(isbn : "1") {
+    isbn
+    author
+    price
+    title
+  }
+}

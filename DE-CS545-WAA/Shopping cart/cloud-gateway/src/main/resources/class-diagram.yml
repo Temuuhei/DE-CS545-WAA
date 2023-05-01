@@ -1,0 +1,24 @@
+  +-------------------+       +---------------------+      +---------------+    +---------------+     +--------------+
+    | User              |     | Product             |     | Order         |     | Payment       |     | Report       |
+    +-------------------+     +---------------------+     +---------------+     +---------------+     +--------------+
+    | id: Long          |     | id: Long            |     | id: Long      |     | id: Long      |     | id: Long     |
+    | email: String     |     | name: String        |     | user: User    |     | order: Order  |     | date: Date   |
+    | password: String  |     | price: BigDecimal   |     | product: Product |  | amount: BigDecimal | | total: BigDecimal |
+    | role: String      |     | vendor: Vendor      |     | quantity: int |     | paymentType: String |  | user: User |
+    |                   |     |                     |     | status: String |    | status: String |     |             |
+    |                   |     |                     |     |               |     |               |     |              |
+    +-------------------+     +---------------------+     +---------------+     +---------------+     +--------------+
+    |                    |                         |                     |                     |
+    |                    |                         |                     |                     |
+    +--------------------+-------------------------+---------------------+---------------------+
+            |                                                               |
+            |                                                               |
+    +---------------------+                                        +---------------------+
+    | Vendor              |                                        | ShoppingCartSystem |
+    +---------------------+                                        +---------------------+
+    | id: Long            |                                        | id: Long            |
+    | name: String        |                                        | name: String        |
+    | email: String       |                                        | url: String         |
+    | password: String    |                                        | vendorCommission: BigDecimal |
+    |                     |                                        |                     |
+    +---------------------+                                        +---------------------+

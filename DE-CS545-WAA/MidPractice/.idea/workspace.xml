@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c25b7cdb-cbad-466f-a2e3-2ef0d341c6ee" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/workspace.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS473DE/CS473DE.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS473DE/src/main/kotlin/homeworks/Book.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS473DE/src/main/kotlin/homeworks/EBook.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS473DE/src/main/kotlin/homeworks/Test.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS473DE/src/main/kotlin/homeworks/homework1.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BookWithGraphQL/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BookWithGraphQL/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BookWithGraphQL/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BookWithGraphQL/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BookWithGraphQL/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BookWithGraphQL/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BookWithGraphQL/readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BookWithGraphQL/src/main/java/book/bookwithgraphql/BookMutation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BookWithGraphQL/src/main/java/book/bookwithgraphql/BookQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BookWithGraphQL/src/main/java/book/bookwithgraphql/BookWithGraphQlApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BookWithGraphQL/src/main/java/book/bookwithgraphql/data/BookRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BookWithGraphQL/src/main/java/book/bookwithgraphql/domain/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BookWithGraphQL/src/main/java/book/bookwithgraphql/integration/EmailSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BookWithGraphQL/src/main/java/book/bookwithgraphql/service/BookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BookWithGraphQL/src/main/java/book/bookwithgraphql/web/BookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BookWithGraphQL/src/main/java/book/bookwithgraphql/web/BookError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BookWithGraphQL/src/main/java/book/bookwithgraphql/web/Books.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BookWithGraphQL/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BookWithGraphQL/src/main/resources/graphql/.graphqlconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BookWithGraphQL/src/main/resources/graphql/book.graphqls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BookWithGraphQL/src/main/resources/graphql/exampleDataForGraphiQL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BookWithGraphQL/src/test/java/book/bookwithgraphql/BookWithGraphQlApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab2Product/lib/javax.annotation.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab2Product/lib/javax.ejb.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab2Product/lib/javax.jms.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab2Product/lib/javax.persistence.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab2Product/lib/javax.resource.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab2Product/lib/javax.servlet.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab2Product/lib/javax.servlet.jsp.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab2Product/lib/javax.servlet.jsp.jstl.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab2Product/lib/javax.transaction.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lesson6WebSocketDemo.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lesson6WebfluxDemo.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5_part2/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5_part2/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5_part2/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5_part2/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5_part2/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5_part2/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5_part2/readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5_part2/src/main/java/bankmongo/lab5_part2/Lab5Part2Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5_part2/src/main/java/bankmongo/lab5_part2/bank/DTO/BankAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5_part2/src/main/java/bankmongo/lab5_part2/bank/DTO/BankDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5_part2/src/main/java/bankmongo/lab5_part2/bank/data/BankRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5_part2/src/main/java/bankmongo/lab5_part2/bank/domain/Bank.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5_part2/src/main/java/bankmongo/lab5_part2/bank/domain/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5_part2/src/main/java/bankmongo/lab5_part2/bank/integration/EmailSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5_part2/src/main/java/bankmongo/lab5_part2/bank/service/BankService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5_part2/src/main/java/bankmongo/lab5_part2/bank/web/BankController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5_part2/src/main/java/bankmongo/lab5_part2/bank/web/CustomerErrorType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5_part2/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5_part2/src/test/java/BankRestTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5_part2/src/test/java/bankmongo/lab5_part2/Lab5Part2ApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PreviousMid.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bmiCalculator/src/main/java/com/example/bmicalculator/BMICalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bmiCalculator/src/main/java/com/example/bmicalculator/BMIController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bmiCalculator/src/main/java/com/example/bmicalculator/Input.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bmiCalculator/src/main/resources/webfiles/enterinput.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bmiCalculator/src/main/resources/webfiles/result.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Shopping cart/cloud-gateway/src/main/java/com/fl/cloudgateway/FallBackMethodController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Shopping cart/cloud-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Shopping cart/cloud-gateway/src/main/resources/class-diagram.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Shopping cart/product-category-service/src/main/java/com/fl/productcategoryservice/controller/CategoryError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Shopping cart/product-category-service/src/main/java/com/fl/productcategoryservice/controller/ProductCategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Shopping cart/product-category-service/src/main/java/com/fl/productcategoryservice/entity/ProductCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Shopping cart/product-category-service/src/main/java/com/fl/productcategoryservice/repository/ProductCategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Shopping cart/product-category-service/src/main/java/com/fl/productcategoryservice/service/ProductCategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Shopping cart/product-category-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Shopping cart/product-service/src/main/java/com/fy/productservice/VO/ProductCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Shopping cart/product-service/src/main/java/com/fy/productservice/VO/ResponseTemplateVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Shopping cart/product-service/src/main/java/com/fy/productservice/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Shopping cart/product-service/src/main/java/com/fy/productservice/controller/ProductError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Shopping cart/product-service/src/main/java/com/fy/productservice/entity/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Shopping cart/product-service/src/main/java/com/fy/productservice/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Shopping cart/product-service/src/main/java/com/fy/productservice/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Shopping cart/product-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Shopping cart/service-registry/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Leetcode/Leetcode.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MobileDE/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MobileDE/.idea/MobileDE.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MobileDE/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MobileDE/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MobileDE/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MobileDE/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MobileDE/Homework1.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MobileDE/homework1/homework1.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MobileDE/out/production/MobileDE/.idea/MobileDE.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/src/main/java/bookandaccount/lab3/BankController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/src/main/java/bookandaccount/lab3/BankController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4/src/main/java/backend_design/lab4/book/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4/src/main/java/backend_design/lab4/book/service/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Online-Shopping-Cart-System/Server/src/main/java/miu/edu/pm/project/onlineshoppingcartsystem/domain/UserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Online-Shopping-Cart-System/Server/src/main/java/miu/edu/pm/project/onlineshoppingcartsystem/domain/UserRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SWE425" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2NlKFn6E2oX4g0JGosQlCSTWCVk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/temuujintsogt/workspace/DE-CS545-WAA/MidPractice&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c25b7cdb-cbad-466f-a2e3-2ef0d341c6ee" name="Changes" comment="" />
+      <created>1680233128505</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680233128505</updated>
+      <workItem from="1680233129905" duration="22406000" />
+      <workItem from="1680721807979" duration="7274000" />
+      <workItem from="1681082597189" duration="3947000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

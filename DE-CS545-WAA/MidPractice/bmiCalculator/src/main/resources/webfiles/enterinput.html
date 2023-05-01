@@ -1,0 +1,22 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <h2>BMI Calculator</h2>
+    <form action="calculateBmi" method = "post" th:object="${input}">
+        <table>
+            <tr>
+                <td>Weight:</td>
+                <td><input type="text" th:field ="*{weight}" /></td>
+                <td th:if="${#fields.hasErrors('weight')}"  th:errors="*{weight}">Weight Error</td>
+            </tr>
+            <tr>
+            <td>Height:</td>
+            <td><input type="text" th:field="*{height}" /></td>
+                <td th:if="${#fields.hasErrors('height')}" th:errors="*{height}">Height Error</td>
+            </tr>
+            <tr>
+                <td><button type="submit">Submit</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

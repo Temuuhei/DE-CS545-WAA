@@ -1,0 +1,328 @@
+Q1:
+
+a. Write an example URL where a requestParam is used
+    A: http://localhost:8080/product?product_id=1
+b. Write the Java code (including annotation) of the controller method that is called by URL of part a. Show how we get the value of requestParam
+    A: @GetMapping("/product")
+       public ResponseEntity<?> getProductByRequestParam(@RequestParam("product_id") int product_id)
+c. Write an example URL where a PathVariable is used
+    A: http://localhost:8080/product/1
+d. Write the Java code (including annotation) of the controller method that is called by URL of part c. Show how we get the value of PathVariable
+    A: @GetMapping("/product/{product_id}")
+        public ResponseEntity<?> getProductByPathVariable(@PathVariable int product_id)
+
+Q2: Describe how we can relate the concept of model-view-controller to the principle of STC. Your answer should be about 2 to 3 paragraphs but should not exceed
+    one page (handwritten). The number of points you get for this question depend on how well you explain the relationship between model-view-controller and the
+    principles of STC.
+
+    A: In model-view-controller (MVC) you separate the responsibilities of the web logic. Pure consciousness transforms itself into knower (Rishi),
+        the known(Chhandas) and the process of knowing (Devata) while maintaining unity.
+
+
+Q3:
+    Select all statements that are correct.
+
+    A. For every client call to a Servlet a new Servlet instance is created
+ T  B. In SpringMVC, the DispatcherServlet is the Front Controller
+ T  C. Flash attributes are stored in the http session
+    D. The HTTP POST request is idempotent
+ T  E. The HTTP PUT request is idempotent
+ T  F. The HTTP DELETE request is idempotent
+ T  G. If you implement GraphQL using Spring Boot you do not need write a Front Controller class.
+    H. Suppose a Server (back-end) application want to call the client(front-end) application anytime the server has new data. This can be done using REST.
+ T  I. Suppose a Server (back-end) application want to call the client(front-end) application anytime the server has new data. This can be done using webflux.
+ T  J. Suppose a Server (back-end) application want to call the client(front-end) application anytime the server has new data. This can be done using web sockets.
+
+Q4: /bmiCalculator
+   // Command class
+
+   @Setter
+   @Getter
+   @NoArgsConstructor
+   public class Input {
+   @Min(value = 50, message = "Weight must be between 50 and 250")
+   @Max(value = 250, message = "Weight must be between 50 and 250")
+   private double weight;
+
+   @Min(value = 3, message = "Height must be between 3 and 10")
+   @Max(value = 10, message = "Height must be between 3 and 10")
+   private double height;
+   }
+    //controller class
+    --
+
+    @Controller
+    public class BMIController {
+
+    @GetMapping("/enterinput")
+    public ModelAndView enterinput() {
+        Input input = new Input();
+        ModelAndView mav = new ModelAndView();
+        mav.addObject("input", input);
+        mav.setViewName("enterinput");
+        return mav;
+    }
+
+    @PostMapping("/calculateBmi")
+    public String calculate(@Valid @RequestBody("input") Input input, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            return "redirect:/enterinput";
+        }
+        if (input != null) {
+            session.setAttribute("weight", input.getWeight());
+            session.setAttribute("height", input.getHeight());
+            session.setAttribute("result", BMICalculator.calculateBmi(input.getWeight(), input.getHeight()));
+        }
+        return "redirect:/result";
+        }
+
+    @GetMapping("/result")
+    public ModelAndView result (HttpSession session) {
+        Double weight = (Double) session.getAttribute("weight");
+        Double height = (Double) session.getAttribute("height");
+        Double result = (Double) session.getAttribute("result");
+
+        Map<String, Object> params = new HashMap<>();
+        params.put("weight", weight);
+        params.put("height", height);
+        params.put("result", result);
+
+        return new ModelAndView("result", params);
+
+    }
+
+    }
+
+
+
+Q5: @Component
+    public class SocketTextHandler extends TextWebSocketHandler {
+    List<WebSocketSession> sessions = new ArrayList<>();
+
+    @Override
+    public void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
+        for (WebSocketSession session : sessions) {
+           if (session.isOpen()) {
+                session.sendMessage(new TextMessage(message.getPayLoad()));
+           }
+           }
+        }
+
+
+    @Override
+    public void afterConnectionEstablished(WebSocketSession session) throws Exception {
+        super.afterConnectionEstablished(session);
+        System.out.println("Connected");
+        sessions.add(session);
+    }
+
+    @Override
+    public void afterConnectionClosed(WebSocketSession session, CloseStatus status) throws Exception {
+        super.afterConnectionClosed(session, status);
+        System.out.println("Closed");
+        sessions.remove(session)
+    }
+
+ }
+
+ Q6: Suppose you need to implement a client (front-end) application and a server (back-end) application. You want to use the REST protocol for the calls between the client and the server.
+     Someone advices you to use webflux instead of REST. The server (back-end) application uses a relational database and the driver we use to access the database is not reactive. Assume that there is no reactive driver for our database.
+     Even with a non-reactive database driver someone still advices you to use webflux instead of REST. Explain clearly what advantage(s) you get if you use webflux instead of REST for the calls between the client and the server.
+
+     A:
+     1. Webflux allows us to create reactive web applications
+     2. Performance - No need to wait till all results are available
+     3. Scaling - fewer threads needed
+     4. Asynchronous processing - Our application is non-blocking
+     5. Better scalability and higher throughput due to its non-blocking and reactive programming model
+     6. Improved latency and responsiveness, especially for high-concurrency scenarios.
+     7. Ability to handle long-lived connections, such as WebSockets, for real-time communication between the client and server
+
+     Here are some reasons why WebFlux may be considered better than traditional REST frameworks:
+
+     1.  Non-blocking I/O: WebFlux is designed to be non-blocking, which means that it can handle a large number of requests with minimal resources.
+         This is particularly useful in high-traffic applications where performance and scalability are critical.
+
+     2.  Reactive programming: WebFlux uses reactive programming to handle requests, which allows for a more efficient use of system resources.
+         Reactive programming allows developers to write code that is more resilient, responsive, and scalable.
+
+     3.  Support for streaming data: WebFlux supports streaming data, which means that clients can receive data in real-time as it is generated on the server.
+         This is particularly useful for applications that require real-time data processing, such as chat applications or real-time analytics.
+
+     4.  Compatibility with existing libraries: WebFlux is compatible with existing Java libraries and frameworks, which means that developers can leverage their existing skills
+         and knowledge to build reactive applications.
+
+ Q7: /Lab5_part2
+
+    Write Signature :
+
+    createAccount(customerName)
+    A:
+    @PostMapping("/accounts")
+    public ResponseEntity<?> createAccount (@Valid @RequestBody Account account, BindingResult bindResult) {}
+
+    getAccount (accountNumber)
+    A:
+    @GetMapping("/accounts/{accountNumber}")
+    public ResponseEntity<?> getAccount (@PathVariable int accountNumber){}
+
+    deposit(accountNumber, amount, description)
+    A:
+    @PutMapping("/accounts/deposit/{amount}/{description}")
+    public ResponseEntity<?> deposit(@PathVariable double amount, @PathVariable String description)
+
+    withdraw(accountNumber, amount, description)
+    A:
+    @PutMapping("/accounts/withdraw/{amount}/{description}")
+    public ResponseEntity<?> withdraw(@PathVariable double amount, @PathVariable String description) {}
+
+    transferFunds(fromAccountNumber, toAccountNumber, amount, description)
+    A:
+    @PostMapping(/accounts/transfer)
+    public ResponseEntity<?> transfer(@RequestParameter("fromAccountNumber") int fromAccountNumber,
+                                      @RequestParameter("toAccountNumber") int toAccountNumber,
+                                      @RequestParameter("amount") double amount,
+                                      @RequestParameter("description") String description
+                                      ) {}
+
+
+Q8: Describe how we can relate the concept of web scope to the principles of STC.
+    Your answer should be about 2 to 3 paragraphs but should not exceed one page (handwritten). The number of points you get for this question depend on how well you
+    explain the relationship between web scope and the principles of STC.
+
+    A:  We have 3 types of scope which are request, session, and context. Because web application has request and response. This means if we send a request to a web application,
+        we get the response that we need it. In the STC we have the principles which are every action has affection and an Unified field of all the laws of nature.
+        If we understand and use these 3 types of scope well, we can learn all the laws of web nature.
+
+
+Q9: We learned that with REST we can have 4 different issues that are solved with GraphQL
+    A:
+    1. No under fetching : Graphql does not use multiple request methods. It uses only one request
+    2. No over fetching : Graphql allows us to choose data what we need instead of all data
+    3. No new endpoints : Graphql does not need to create new endpoints for each API, We just create schema and it is easy to implement
+    4. API documentation: Graphql uses its own schema. It allows us to understand easily
+
+
+STC :
+-
+    1. SpringMVC is a server-side web framework that supports all necessary web specific functionality
+    2. The PRG pattern redirects all responses of a POST request to a GET request
+    3. Transcendental consciousness is the direct experience of pure consciousness, the unified field of all the laws of nature.
+    4. Wholeness moving within itself: In unity consciousness, one appreciates the inherent underlying unity that underlies all the diversity of creation.
+
+-
+    The web container generates a servlet from a JSP file the first time the JSP is requested from a web application.
+    Since a JSP is essentially a servlet, one should understand servlets to effectively deal with JSPs.
+    Actions in accord with fundamental levels of intelligence result in success in the relative world.
+
+-
+    1. A servlet is the basic building block of web applications in Java
+    2. The separation of Model-View-Controller gives structure to the web application according design best practices
+    3. Transcendental consciousness is the natural experience pure consciousness, the home of all the laws of nature.
+    4. Wholeness moving within itself: In unity consciousness, one appreciates and enjoys the underlying blissful nature of life even in all the abstract expressions of
+        pure consciousness.
+-
+    The command object makes it easy to pass form data to the controller. The Unified field is the source of all relative aspects of creation.
+-
+    The JSR 303 constraints can be used for form validation. Daily access to pure consciousness leads more happiness and fulfilment in life.
+-
+    GET requests are idempotent, POST requests are not idempotent. The Unified field is the source of all change.
+
+
+GraphQL examples :
+
+    type Book {
+        isbn : String!
+        author : String!
+        title : String!
+        price : Float!
+    }
+
+    type Query {
+        books(count:Int!):[Book]
+        book(isbn:String!):Book
+    }
+
+    type Mutation {
+        createBook(isbn:String!, author:String!, title : String!, price:Float!) : Book
+        deleteBook(isbn : String!) : Book
+        updateBook(isbn:String!, author:String!, title : String!, price:Float!) : Book
+    }
+
+BookQuery:
+    @Component
+    public class BookQuery implements GraphQLQueryResolver {
+
+        @Autowired
+        private BookService bookService;
+
+
+
+        public List<Book> getBooks (final int count) {
+            return bookService.getAllBooks(count);
+        }
+
+        public Optional<Book> getBook(final String isbn) {
+            return bookService.getBook(isbn);
+        }
+    }
+
+BookMutation:
+    @Component
+    public class BookMutation implements GraphQLMutationResolver {
+        @Autowired
+        private BookService bookService;
+
+        public Book createBook(String isbnm, String author, String title, double price) {
+            return bookService.createBook(isbnm, author, title, price);
+        }
+
+        public Book updateBook(String isbnm, String author, String title, double price) {
+            return bookService.createBook(isbnm, author, title, price);
+        }
+
+        public Optional<Book> deleteBook(String isbn) {
+            Optional<Book> book = bookService.getBook(isbn);
+            bookService.delete(isbn);
+            return book;
+        }
+    }
+
+// Handle validation errors in controller
+
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity<Object> handleValidationExceptions(MethodArgumentNotValidException ex) {
+        Map<String, Object> fieldError = new HashMap<>();
+        List<FieldError> fieldErrors= ex.getBindingResult().getFieldErrors();
+        for (FieldError error : fieldErrors) {
+            fieldError.put(error.getField(), error.getDefaultMessage());
+        }
+        Map<String, Object> map = new HashMap<>();
+        map.put("isSuccess", false);
+        map.put("data", null);
+        map.put("status", HttpStatus.BAD_REQUEST);
+        map.put("fieldError", fieldError);
+        return new ResponseEntity<Object>(map,HttpStatus.BAD_REQUEST);
+    }
+
+// Handle validation errors for all controllers
+    @ControllerAdvice
+    public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
+
+        protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
+
+            Map<String, Object> fieldError = new HashMap<>();
+            List<FieldError> fieldErrors= ex.getBindingResult().getFieldErrors();
+            for (FieldError error : fieldErrors) {
+                fieldError.put(error.getField(), error.getDefaultMessage());
+            }
+            Map<String, Object> map = new HashMap<>();
+            map.put("isSuccess", false);
+            map.put("data", null);
+            map.put("status", HttpStatus.BAD_REQUEST);
+            map.put("fieldError", fieldError);
+            return new ResponseEntity<Object>(map,HttpStatus.BAD_REQUEST);
+        }
+    }
+
+
